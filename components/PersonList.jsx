@@ -25,7 +25,7 @@ var PersonList = createReactClass({
             <div className="person-list">
                 <AddPerson addFunc={this.add} />
                 {this.state.persons.map((person, index)=>{
-                    return <Person key={index} index={index} person={person} deleteFunc={this.delete} />
+                    return <Person key={index} index={index} person={person} deleteFunc={this.delete.bind(null, this)} />
                 })}
             </div>
         );

@@ -8,7 +8,7 @@ var AddPerson = createReactClass({
             <div className="add-person">
                 <input type="text" name="name" placeholder="Enter name" ref={name=>this.inputName=name} />
                 <input type="text" name="age" placeholder="Enter Age" ref={age=>this.inputAge=age} />
-                <button onClick={this.addPerson}>Add</button>
+                <button onClick={this.addPerson.bind(null, this)}>Add</button>
             </div>
         );
     },
